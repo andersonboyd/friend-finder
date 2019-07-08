@@ -1,16 +1,29 @@
 var friendArray = [
     {
-        name: "Dev",
+        name: "This guy!",
+        photo: "../images/thisguy.jpg",
         scores: [5, 4, 3, 5, 1, 3, 2, 5, 4, 4]
     },
     {
-        name: "Andy",
+        name: "That guy!",
+        photo: "../images/thatguy.jpg",
         scores: [5, 4, 3, 2, 1, 2, 3, 4, 5, 1]
     },
     {
-        name: "Joel",
+        name: "This grandma!",
+        photo: "../images/thuglady.jpeg",
         scores: [1, 2, 3, 4, 5, 4, 3, 2, 1, 5]
+    },
+    {
+        name: "Harold!",
+        photo: "../images/harold.jpg",
+        scores: [1, 2, 1, 2, 3, 2, 1, 2, 3, 4]
+    },
+    {
+        name: "This guy with too much pasta! Maybe you two can share it?",
+        photo: "../images/pastaguy.jpg",
+        scores: [3, 4, 3, 3, 4, 2, 1, 5, 5, 5]
     }
-]
+];
 
 module.exports = friendArray;
