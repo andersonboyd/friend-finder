@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/andersonboyd/friend-finder#readme",
   "dependencies": {
-    "dotenv": "^8.0.0",
     "express": "^4.17.1"
   }
 }
