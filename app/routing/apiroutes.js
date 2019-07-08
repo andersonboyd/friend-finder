@@ -1,13 +1,29 @@
-var friendsData = require("../app/data/friends");
+var friends = require("../app/data/friends");
 
 module.exports = function(app){
-    app.get("../app/data/friends", function(req, res){
-        res.json(friendsData);
+    app.get("/api/friends", function(req, res){
+        res.json(friends);
     });
 
-    app.post("../app/data/friends", function(req, res){
-        friendsData.push(req.body);
-        res.json(true);
-        //check compatibility here
+    app.post("/api/friends", function(req, res){
+        var user = req.body;
+        for(var i = 0; i < user.scores.length; i++){
+            user.scores[i] = parseInt(user.scores[i]);
+        }
+        var bestFriendIndex = 0;
+        var minDiff = 40;
+        for(var i = 0; i < friends.length; i++){
+            var totalDiff = 0;
+            for(var j = 0; j < friends[i].scores.length; j++){
+                var diff = Math.abs(user.scores[j] - friends[i].scores[j]);
+                totalDiff += diff;
+            }
+            if(totalDiff < minDiff){
+                bestFriendIndex = i;
+                minDiff = totalDiff;
+            }
+        }
+        friends.push(user);
+        res.json(friends[bestFriendIndex]);
     });
 }
