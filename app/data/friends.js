@@ -6,7 +6,7 @@ var friendArray = [
     },
     {
         name: "That guy!",
-        photo: "https://birdinflight.imgix.net/wp-content/uploads/2016/12/vr-headphones-stock-photo_cover.jpg?fm=pjpg&q=80&fit=crop&crop=faces&w=630&h=331",
+        photo: "https://i.pinimg.com/236x/7d/88/ba/7d88babdf4138bdbe3c63ffda60dfa65--funny-cats-funny-jokes.jpg",
         scores: [5, 4, 3, 2, 1, 2, 3, 4, 5, 1]
     },
     {
